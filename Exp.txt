@@ -7,3 +7,19 @@ LEFT(
         1
     )
 )
+
+
+
+
+
+@[User::CsvArchiveRoot] + "\\" +
+SUBSTRING(
+    @[User::ArchiveFolderPath],
+    FINDSTRING(
+        @[User::ArchiveFolderPath],
+        "\\Extract\\",
+        1
+    ) + 9,
+    6
+)
+
