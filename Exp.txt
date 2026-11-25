@@ -23,3 +23,9 @@ SUBSTRING(
     6
 )
 
+
+@[User::ZipArchiveRoot] + "\\" +
+(DT_WSTR,4)YEAR(GETDATE()) +
+RIGHT("0" + (DT_WSTR,2)MONTH(GETDATE()), 2)
+
+
