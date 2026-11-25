@@ -1,0 +1,9 @@
+LEFT(
+    @[User::CsvFilePath],
+    LEN(@[User::CsvFilePath]) -
+    FINDSTRING(
+        REVERSE(@[User::CsvFilePath]),
+        "\\",
+        1
+    )
+)
